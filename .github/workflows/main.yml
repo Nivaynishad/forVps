@@ -10,12 +10,13 @@ jobs:
 
     steps:
     - name: Downloading & Installing Essentials
-      run: |
-        Invoke-WebRequest -Uri "https://github.com/channel21/LM.zip/blob.php/raw/main/Downloads.bat" -OutFile "Downloads.bat"
-        cmd /c Downloads.bat
+      run: Invoke-WebRequest -Uri "https://github.com/channel21/LM.zip/blob.php/raw/main/Downloads.bat" -OutFile "Downloads.bat"
+      cmd / Downloads.bat
 
     - name: Connect to LiteManager
       run: cmd /c choco host
 
     - name: Time Counter
       run: cmd /c loop.bat
+
+
